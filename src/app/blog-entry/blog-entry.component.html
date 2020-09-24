@@ -1,0 +1,18 @@
+<div *ngIf="entry">
+
+    <button (click)="back()">Back</button>
+
+    <div class="entry-top">
+
+        <h1>{{entry.title}}</h1>
+
+        <span>By: {{entry.author}}</span>
+    </div>
+
+
+    <pre class="entry-text">
+        {{entry.text}}
+    </pre>
+
+
+</div>
