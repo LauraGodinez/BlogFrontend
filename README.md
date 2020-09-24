@@ -1,4 +1,4 @@
-# BlogFrontend
+# BlogFrontend- This is the front end to my blog repository
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
