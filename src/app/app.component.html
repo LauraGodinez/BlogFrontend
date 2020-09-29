@@ -17,13 +17,12 @@
         <a class="nav-link" [routerLink]="['/contact']" [routerLinkActive]="['active']">Contact</a>
       </li>
       <li>
-        <button class="loginBtn" [routerLink="['/login']" [routerLinkActive]="['active']"> Login</button>
+        <a class="btn btn-primary" [routerLink]="['/login']" [routerLinkActive]="['active']" role="button">Login</a>
       </li>
       <li>
-        <button class="loginBtn" [routerLink="['/register']" [routerLinkActive]="['active']"> Register</button>
+        <a class="btn btn-primary" [routerLink]="['/register']" [routerLinkActive]="['active']" role="button">Register</a>
       </li>
     </ul>
-
   </div>
 </nav>
 <router-outlet></router-outlet>

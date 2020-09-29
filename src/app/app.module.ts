@@ -9,9 +9,10 @@ import { ContactComponent } from "./contact/contact.component";
 import { BlogComponent } from "./blog/blog.component";
 import { BlogEntryComponent } from './blog-entry/blog-entry.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, ContactComponent, BlogComponent, BlogEntryComponent, LoginComponent],
+  declarations: [AppComponent, AboutComponent, ContactComponent, BlogComponent, BlogEntryComponent, LoginComponent, RegisterComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]

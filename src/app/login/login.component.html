@@ -1,26 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
 <body>
     <div class="container-fluid bg">
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12"></div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="col-lg-4 col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="col-lg-4 col-md-8 col-sm-8 col-xs-12">
                 <!-- form start -->
-                <form class="form-container signUpForm-C">
-                    <h1 class="header">Sign Up </h1>
-                    <div class="form-group signUpLabels">
-                        <input type="text" class="form-control" id="signupLastName-id" aria-describedby="emailHelp" placeholder="First Name"><br>
-                        <input type="text" class="form-control" id="signUpLastName-id" aria-describedby="emailHelp" placeholder="Last Name"><br>
-                        <input type="email" class="form-control" id="signUpInputEmail-id" aria-describedby="emailHelp" placeholder="Email"><br>
-                        <input type="text" class="form-control" id="signUpPassword-id" aria-describedby="emailHelp" placeholder="Password"><br>
-                        <input type="text" class="form-control" id="signUpPasswordConf-id" aria-describedby="emailHelp" placeholder="Confirm Email"><br>
-
-
+                <form class="form-container">
+                    <h1 class="header">SIGN IN </h1>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-                    <small id="signup" class="form-text text-muted">Already a member? <a href="./login.html"> Log In</a></small>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="remember-checkbox">
+                        <label class="form-check-label" for="remember-checkbox">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
                 <!-- form end -->
             </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-lg-4 col-md-2 col-sm-2 col-xs-12"></div>
         </div>
     </div>
+</body>
+
+</html>

@@ -4,12 +4,17 @@ import { AboutComponent } from "./about/about.component";
 import { ContactComponent } from "./contact/contact.component";
 import { BlogComponent } from "./blog/blog.component";
 import { BlogEntryComponent } from "./blog-entry/blog-entry.component";
+import { RegisterComponent } from "./register/register.component";
+import { LoginComponent } from "./login/login.component";
 
 const routes: Routes = [
+  { path: "", redirectTo: "/blog", pathMatch: "full" },
   { path: "blog", component: BlogComponent },
   { path: "blog-entry/:id", component: BlogEntryComponent },
   { path: "about", component: AboutComponent },
-  { path: "contact", component: ContactComponent }
+  { path: "contact", component: ContactComponent },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent }
 ];
 
 @NgModule({
