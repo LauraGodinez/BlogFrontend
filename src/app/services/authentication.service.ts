@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
-import { tap } from "rxjs/operators";
+import { tap, map } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -11,12 +11,17 @@ export class AuthenticationService {
   constructor() {}
 
   setAuthenticated(): void {
+    localStorage.setItem("authenticated", "true");
     this.isAuthenticatedVal.next(true);
   }
 
   isAuthenticated$(): Observable<boolean> {
-    return this.isAuthenticatedVal
-      .asObservable()
-      .pipe(tap(resp => console.log(resp)));
+    return this.isAuthenticatedVal.asObservable().pipe(
+      map(resp => {
+        let authenticated = localStorage.getItem("authenticated");
+
+        return authenticated === "true";
+      })
+    );
   }
 }

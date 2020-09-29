@@ -16,14 +16,14 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/contact']" [routerLinkActive]="['active']">Contact</a>
       </li>
-      <li>
+      <li *ngIf="!(isAuthenticated$ | async)">
         <a class="btn btn-primary" [routerLink]="['/login']" [routerLinkActive]="['active']" role="button">Login</a>
       </li>
-      <li>
+      <li *ngIf="!(isAuthenticated$ | async)">
         <a class="btn btn-primary" [routerLink]="['/register']" [routerLinkActive]="['active']" role="button">Register</a>
       </li>
       <li *ngIf="isAuthenticated$ | async">
-        <a class="btn btn-primary" [routerLink]="['/admin']" [routerLinkActive]="['active']" role="button">Admin</a>
+        <a class="nav-link" [routerLink]="['/admin']" [routerLinkActive]="['active']" role="button">Create</a>
       </li>
     </ul>
   </div>
