@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Users } from "../models/users";
 import { HttpClient } from "@angular/common/http";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { AuthenticationService } from "src/app/services/authentication.service";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -13,7 +14,10 @@ export class LoginComponent implements OnInit {
     password: new FormControl("", Validators.required)
   });
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private authenticationService: AuthenticationService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -21,8 +25,11 @@ export class LoginComponent implements OnInit {
     console.log(this.loginFormGroup.value);
 
     this.httpClient
-      .post("http://localhost:8080/login", this.loginFormGroup.value)
+      .post("http://localhost:8080/authenticate", this.loginFormGroup.value)
       .subscribe(response => {
+        if (response) {
+          this.authenticationService.setAuthenticated();
+        }
         console.log(response);
       });
   }

@@ -22,6 +22,9 @@
       <li>
         <a class="btn btn-primary" [routerLink]="['/register']" [routerLinkActive]="['active']" role="button">Register</a>
       </li>
+      <li *ngIf="isAuthenticated$ | async">
+        <a class="btn btn-primary" [routerLink]="['/admin']" [routerLinkActive]="['active']" role="button">Admin</a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -6,6 +6,8 @@ import { BlogComponent } from "./blog/blog.component";
 import { BlogEntryComponent } from "./blog-entry/blog-entry.component";
 import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
+import { AdminComponent } from "./admin/admin.component";
+import { AuthenticationGuard } from "./guards/authentication.guard";
 
 const routes: Routes = [
   { path: "", redirectTo: "/blog", pathMatch: "full" },
@@ -14,7 +16,12 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "contact", component: ContactComponent },
   { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent }
+  { path: "register", component: RegisterComponent },
+  {
+    path: "admin",
+    component: AdminComponent,
+    canActivate: [AuthenticationGuard]
+  }
 ];
 
 @NgModule({
