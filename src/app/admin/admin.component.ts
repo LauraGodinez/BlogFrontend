@@ -20,5 +20,10 @@ export class AdminComponent implements OnInit {
 
   submitForm(): void {
     console.log(this.createFormGroup.value);
+
+    this.httpClient.post(
+      "http://localhost:8080/entry",
+      this.createFormGroup.value
+    );
   }
 }
